@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F03695429583F32004FCC1D /* iLocalConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03695329583F32004FCC1D /* iLocalConnectApp.swift */; };
+		4F03695629583F32004FCC1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03695529583F32004FCC1D /* ContentView.swift */; };
+		4F03695829583F33004FCC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03695729583F33004FCC1D /* Assets.xcassets */; };
+		4F03695B29583F33004FCC1D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03695A29583F33004FCC1D /* Preview Assets.xcassets */; };
+		4F03696629583F34004FCC1D /* iLocalConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03696529583F34004FCC1D /* iLocalConnectTests.swift */; };
+		4F03697029583F34004FCC1D /* iLocalConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03696F29583F34004FCC1D /* iLocalConnectUITests.swift */; };
+		4F03697229583F34004FCC1D /* iLocalConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03697129583F34004FCC1D /* iLocalConnectUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F03696229583F34004FCC1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F03694829583F32004FCC1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F03694F29583F32004FCC1D;
+			remoteInfo = iLocalConnect;
+		};
+		4F03696C29583F34004FCC1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F03694829583F32004FCC1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F03694F29583F32004FCC1D;
+			remoteInfo = iLocalConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F03695029583F32004FCC1D /* iLocalConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLocalConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F03695329583F32004FCC1D /* iLocalConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLocalConnectApp.swift; sourceTree = "<group>"; };
+		4F03695529583F32004FCC1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4F03695729583F33004FCC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F03695A29583F33004FCC1D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F03695C29583F33004FCC1D /* iLocalConnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iLocalConnect.entitlements; sourceTree = "<group>"; };
+		4F03696129583F34004FCC1D /* iLocalConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iLocalConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F03696529583F34004FCC1D /* iLocalConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLocalConnectTests.swift; sourceTree = "<group>"; };
+		4F03696B29583F34004FCC1D /* iLocalConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iLocalConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F03696F29583F34004FCC1D /* iLocalConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLocalConnectUITests.swift; sourceTree = "<group>"; };
+		4F03697129583F34004FCC1D /* iLocalConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLocalConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F03694D29583F32004FCC1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F03695E29583F34004FCC1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F03696829583F34004FCC1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F03694729583F32004FCC1D = {
+			isa = PBXGroup;
+			children = (
+				4F03695229583F32004FCC1D /* iLocalConnect */,
+				4F03696429583F34004FCC1D /* iLocalConnectTests */,
+				4F03696E29583F34004FCC1D /* iLocalConnectUITests */,
+				4F03695129583F32004FCC1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F03695129583F32004FCC1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F03695029583F32004FCC1D /* iLocalConnect.app */,
+				4F03696129583F34004FCC1D /* iLocalConnectTests.xctest */,
+				4F03696B29583F34004FCC1D /* iLocalConnectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F03695229583F32004FCC1D /* iLocalConnect */ = {
+			isa = PBXGroup;
+			children = (
+				4F03695329583F32004FCC1D /* iLocalConnectApp.swift */,
+				4F03695529583F32004FCC1D /* ContentView.swift */,
+				4F03695729583F33004FCC1D /* Assets.xcassets */,
+				4F03695C29583F33004FCC1D /* iLocalConnect.entitlements */,
+				4F03695929583F33004FCC1D /* Preview Content */,
+			);
+			path = iLocalConnect;
+			sourceTree = "<group>";
+		};
+		4F03695929583F33004FCC1D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4F03695A29583F33004FCC1D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F03696429583F34004FCC1D /* iLocalConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F03696529583F34004FCC1D /* iLocalConnectTests.swift */,
+			);
+			path = iLocalConnectTests;
+			sourceTree = "<group>";
+		};
+		4F03696E29583F34004FCC1D /* iLocalConnectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4F03696F29583F34004FCC1D /* iLocalConnectUITests.swift */,
+				4F03697129583F34004FCC1D /* iLocalConnectUITestsLaunchTests.swift */,
+			);
+			path = iLocalConnectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F03694F29583F32004FCC1D /* iLocalConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F03697529583F34004FCC1D /* Build configuration list for PBXNativeTarget "iLocalConnect" */;
+			buildPhases = (
+				4F03694C29583F32004FCC1D /* Sources */,
+				4F03694D29583F32004FCC1D /* Frameworks */,
+				4F03694E29583F32004FCC1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iLocalConnect;
+			productName = iLocalConnect;
+			productReference = 4F03695029583F32004FCC1D /* iLocalConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F03696029583F34004FCC1D /* iLocalConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F03697829583F34004FCC1D /* Build configuration list for PBXNativeTarget "iLocalConnectTests" */;
+			buildPhases = (
+				4F03695D29583F34004FCC1D /* Sources */,
+				4F03695E29583F34004FCC1D /* Frameworks */,
+				4F03695F29583F34004FCC1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F03696329583F34004FCC1D /* PBXTargetDependency */,
+			);
+			name = iLocalConnectTests;
+			productName = iLocalConnectTests;
+			productReference = 4F03696129583F34004FCC1D /* iLocalConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F03696A29583F34004FCC1D /* iLocalConnectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F03697B29583F34004FCC1D /* Build configuration list for PBXNativeTarget "iLocalConnectUITests" */;
+			buildPhases = (
+				4F03696729583F34004FCC1D /* Sources */,
+				4F03696829583F34004FCC1D /* Frameworks */,
+				4F03696929583F34004FCC1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F03696D29583F34004FCC1D /* PBXTargetDependency */,
+			);
+			name = iLocalConnectUITests;
+			productName = iLocalConnectUITests;
+			productReference = 4F03696B29583F34004FCC1D /* iLocalConnectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F03694829583F32004FCC1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					4F03694F29583F32004FCC1D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					4F03696029583F34004FCC1D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 4F03694F29583F32004FCC1D;
+					};
+					4F03696A29583F34004FCC1D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 4F03694F29583F32004FCC1D;
+					};
+				};
+			};
+			buildConfigurationList = 4F03694B29583F32004FCC1D /* Build configuration list for PBXProject "iLocalConnect" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F03694729583F32004FCC1D;
+			productRefGroup = 4F03695129583F32004FCC1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F03694F29583F32004FCC1D /* iLocalConnect */,
+				4F03696029583F34004FCC1D /* iLocalConnectTests */,
+				4F03696A29583F34004FCC1D /* iLocalConnectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F03694E29583F32004FCC1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F03695B29583F33004FCC1D /* Preview Assets.xcassets in Resources */,
+				4F03695829583F33004FCC1D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F03695F29583F34004FCC1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F03696929583F34004FCC1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F03694C29583F32004FCC1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F03695629583F32004FCC1D /* ContentView.swift in Sources */,
+				4F03695429583F32004FCC1D /* iLocalConnectApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F03695D29583F34004FCC1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F03696629583F34004FCC1D /* iLocalConnectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F03696729583F34004FCC1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F03697029583F34004FCC1D /* iLocalConnectUITests.swift in Sources */,
+				4F03697229583F34004FCC1D /* iLocalConnectUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F03696329583F34004FCC1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F03694F29583F32004FCC1D /* iLocalConnect */;
+			targetProxy = 4F03696229583F34004FCC1D /* PBXContainerItemProxy */;
+		};
+		4F03696D29583F34004FCC1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F03694F29583F32004FCC1D /* iLocalConnect */;
+			targetProxy = 4F03696C29583F34004FCC1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4F03697329583F34004FCC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F03697429583F34004FCC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4F03697629583F34004FCC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iLocalConnect/iLocalConnect.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iLocalConnect/Preview Content\"";
+				DEVELOPMENT_TEAM = WNUZX4NA7T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahlittle.iLocalConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4F03697729583F34004FCC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iLocalConnect/iLocalConnect.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iLocalConnect/Preview Content\"";
+				DEVELOPMENT_TEAM = WNUZX4NA7T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahlittle.iLocalConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4F03697929583F34004FCC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WNUZX4NA7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahlittle.iLocalConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iLocalConnect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iLocalConnect";
+			};
+			name = Debug;
+		};
+		4F03697A29583F34004FCC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WNUZX4NA7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahlittle.iLocalConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iLocalConnect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iLocalConnect";
+			};
+			name = Release;
+		};
+		4F03697C29583F34004FCC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WNUZX4NA7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahlittle.iLocalConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = iLocalConnect;
+			};
+			name = Debug;
+		};
+		4F03697D29583F34004FCC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WNUZX4NA7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahlittle.iLocalConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = iLocalConnect;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F03694B29583F32004FCC1D /* Build configuration list for PBXProject "iLocalConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F03697329583F34004FCC1D /* Debug */,
+				4F03697429583F34004FCC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F03697529583F34004FCC1D /* Build configuration list for PBXNativeTarget "iLocalConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F03697629583F34004FCC1D /* Debug */,
+				4F03697729583F34004FCC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F03697829583F34004FCC1D /* Build configuration list for PBXNativeTarget "iLocalConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F03697929583F34004FCC1D /* Debug */,
+				4F03697A29583F34004FCC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F03697B29583F34004FCC1D /* Build configuration list for PBXNativeTarget "iLocalConnectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F03697C29583F34004FCC1D /* Debug */,
+				4F03697D29583F34004FCC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F03694829583F32004FCC1D /* Project object */;
+}
