@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4F03695429583F32004FCC1D /* iLocalConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03695329583F32004FCC1D /* iLocalConnectApp.swift */; };
-		4F03695629583F32004FCC1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03695529583F32004FCC1D /* ContentView.swift */; };
 		4F03695829583F33004FCC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03695729583F33004FCC1D /* Assets.xcassets */; };
 		4F03695B29583F33004FCC1D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03695A29583F33004FCC1D /* Preview Assets.xcassets */; };
 		4F03696629583F34004FCC1D /* iLocalConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03696529583F34004FCC1D /* iLocalConnectTests.swift */; };
 		4F03697029583F34004FCC1D /* iLocalConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03696F29583F34004FCC1D /* iLocalConnectUITests.swift */; };
 		4F03697229583F34004FCC1D /* iLocalConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03697129583F34004FCC1D /* iLocalConnectUITestsLaunchTests.swift */; };
+		4F036981295840EF004FCC1D /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F036980295840EF004FCC1D /* MenuBarView.swift */; };
+		4F036983295841C2004FCC1D /* MenuBarView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F036982295841C2004FCC1D /* MenuBarView.ViewModel.swift */; };
+		4F0369852958460D004FCC1D /* MenuBarActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0369842958460D004FCC1D /* MenuBarActionManager.swift */; };
+		4F03698B29594B60004FCC1D /* MenuBarSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03698A29594B5F004FCC1D /* MenuBarSettingsView.swift */; };
+		4F03698D29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03698C29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift */; };
+		4F03698F29594DBA004FCC1D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03698E29594DBA004FCC1D /* Settings.swift */; };
+		4F03699129596134004FCC1D /* ScriptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03699029596134004FCC1D /* ScriptHelper.swift */; };
+		4F0369942959686E004FCC1D /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0369932959686E004FCC1D /* SuggestionView.swift */; };
+		4F03699629596ED1004FCC1D /* SuggestionView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03699529596ED1004FCC1D /* SuggestionView.ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,6 @@
 /* Begin PBXFileReference section */
 		4F03695029583F32004FCC1D /* iLocalConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLocalConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F03695329583F32004FCC1D /* iLocalConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLocalConnectApp.swift; sourceTree = "<group>"; };
-		4F03695529583F32004FCC1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4F03695729583F33004FCC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F03695A29583F33004FCC1D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F03695C29583F33004FCC1D /* iLocalConnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iLocalConnect.entitlements; sourceTree = "<group>"; };
@@ -45,6 +52,15 @@
 		4F03696B29583F34004FCC1D /* iLocalConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iLocalConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F03696F29583F34004FCC1D /* iLocalConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLocalConnectUITests.swift; sourceTree = "<group>"; };
 		4F03697129583F34004FCC1D /* iLocalConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLocalConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4F036980295840EF004FCC1D /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		4F036982295841C2004FCC1D /* MenuBarView.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.ViewModel.swift; sourceTree = "<group>"; };
+		4F0369842958460D004FCC1D /* MenuBarActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarActionManager.swift; sourceTree = "<group>"; };
+		4F03698A29594B5F004FCC1D /* MenuBarSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarSettingsView.swift; sourceTree = "<group>"; };
+		4F03698C29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarSettingsView.ViewModel.swift; sourceTree = "<group>"; };
+		4F03698E29594DBA004FCC1D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4F03699029596134004FCC1D /* ScriptHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptHelper.swift; sourceTree = "<group>"; };
+		4F0369932959686E004FCC1D /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
+		4F03699529596ED1004FCC1D /* SuggestionView.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +111,9 @@
 		4F03695229583F32004FCC1D /* iLocalConnect */ = {
 			isa = PBXGroup;
 			children = (
+				4F03699229596343004FCC1D /* Core */,
+				4F03697E295840C6004FCC1D /* SwiftUI */,
 				4F03695329583F32004FCC1D /* iLocalConnectApp.swift */,
-				4F03695529583F32004FCC1D /* ContentView.swift */,
 				4F03695729583F33004FCC1D /* Assets.xcassets */,
 				4F03695C29583F33004FCC1D /* iLocalConnect.entitlements */,
 				4F03695929583F33004FCC1D /* Preview Content */,
@@ -127,6 +144,37 @@
 				4F03697129583F34004FCC1D /* iLocalConnectUITestsLaunchTests.swift */,
 			);
 			path = iLocalConnectUITests;
+			sourceTree = "<group>";
+		};
+		4F03697E295840C6004FCC1D /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				4F03697F295840D6004FCC1D /* MenuBar */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		4F03697F295840D6004FCC1D /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				4F036980295840EF004FCC1D /* MenuBarView.swift */,
+				4F036982295841C2004FCC1D /* MenuBarView.ViewModel.swift */,
+				4F03698A29594B5F004FCC1D /* MenuBarSettingsView.swift */,
+				4F03698C29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift */,
+				4F0369932959686E004FCC1D /* SuggestionView.swift */,
+				4F03699529596ED1004FCC1D /* SuggestionView.ViewModel.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		4F03699229596343004FCC1D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4F03698E29594DBA004FCC1D /* Settings.swift */,
+				4F03699029596134004FCC1D /* ScriptHelper.swift */,
+				4F0369842958460D004FCC1D /* MenuBarActionManager.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F03695629583F32004FCC1D /* ContentView.swift in Sources */,
+				4F036981295840EF004FCC1D /* MenuBarView.swift in Sources */,
+				4F0369942959686E004FCC1D /* SuggestionView.swift in Sources */,
+				4F0369852958460D004FCC1D /* MenuBarActionManager.swift in Sources */,
+				4F03699129596134004FCC1D /* ScriptHelper.swift in Sources */,
+				4F03698B29594B60004FCC1D /* MenuBarSettingsView.swift in Sources */,
+				4F036983295841C2004FCC1D /* MenuBarView.ViewModel.swift in Sources */,
+				4F03698F29594DBA004FCC1D /* Settings.swift in Sources */,
+				4F03698D29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift in Sources */,
+				4F03699629596ED1004FCC1D /* SuggestionView.ViewModel.swift in Sources */,
 				4F03695429583F32004FCC1D /* iLocalConnectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +480,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,6 +508,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

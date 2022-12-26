@@ -10,8 +10,14 @@ import SwiftUI
 @main
 struct iLocalConnectApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra {
+            MenuBarView()
+        } label: {
+            HStack {
+                Image(systemName: "terminal")
+                Text("iLocalConnect")
+            }
         }
+        .menuBarExtraStyle(.window)
     }
 }

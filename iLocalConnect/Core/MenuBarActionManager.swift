@@ -39,19 +39,6 @@ final class MenuBarActionManager {
     }
     
     func connectWithTerminal() {
-        DispatchQueue.global(qos: .default).async { [weak self] in
-            var error: NSDictionary?
-
-            if let script = self?.scriptHelper.openTerminalScript(),
-               let object = NSAppleScript(source: script) {
-                let output = object.executeAndReturnError(&error)
-                
-                if let error {
-                    print("error: \(error)")
-                } else {
-                    print(output.stringValue ?? "Succeeded")
-                }
-            }
-        }
+        scriptHelper.openTerminal(withCommand: "ssh \(Settings.username)@localhost -p \(Settings.port)")
     }
 }

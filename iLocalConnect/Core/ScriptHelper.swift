@@ -8,14 +8,30 @@
 import Foundation
 
 struct ScriptHelper {
-    func openTerminalScript() -> String {
+    func script(fromCommand command: String) -> String {
         """
         tell application "Terminal"
             if not (exists window 1) then reopen
             activate
-            do script "ssh \(Settings.username)@localhost -p \(Settings.port)" in window 1
+            do script "\(command)" in window 1
         end tell
         """
+    }
+    
+    func openTerminal(withCommand command: String) {
+        DispatchQueue.global(qos: .default).async {
+            var error: NSDictionary?
+            let script = script(fromCommand: command)
+            
+            if let object = NSAppleScript(source: script) {
+                let output = object.executeAndReturnError(&error)
+                if let error {
+                    print("error: \(error)")
+                } else {
+                    print(output.stringValue ?? "Succeeded")
+                }
+            }
+        }
     }
     
     @discardableResult

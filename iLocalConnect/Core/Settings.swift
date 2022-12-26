@@ -37,4 +37,13 @@ struct Settings {
             UserDefaults.standard.set(newValue, forKey: "iLocalConnect.port")
         }
     }
+    
+    static var isInstalledHomebrew: Bool {
+        return FileManager.default.fileExists(atPath: "/opt/homebrew/bin/brew")
+    }
+    
+    static func isInstalledIProxy() async -> Bool {
+        let (output, _) = await ScriptHelper().shell("/usr/bin/which", ["iproxy"])
+        return output != nil
+    }
 }
