@@ -11,40 +11,38 @@ extension SuggestionView {
     enum SuggestionType {
         case homebrew
         case iproxy
-    }
-    
-    struct ViewModel {
-        private(set) var suggestionType: SuggestionType
         
-        init(suggestionType: SuggestionType) {
-            self.suggestionType = suggestionType
-        }
-        
-        lazy var title: String = {
-            switch suggestionType {
+        func title() -> String {
+            switch self {
             case .homebrew:
                 return "Install Homebrew"
             case .iproxy:
                 return "Install iProxy"
             }
-        }()
+        }
         
-        lazy var subtitle: String = {
-            switch suggestionType {
+        func subtitle() -> String {
+            switch self {
             case .homebrew:
                 return "Homebrew was not found on the disk, it is recommended to install by clicking here."
             case .iproxy:
                 return "iProxy was not found on the disk, it is recommended to install by clicking here."
             }
-        }()
+        }
         
-        lazy var command: String = {
-            switch suggestionType {
-            case .homebrew:
-                return "https://brew.sh"
-            case .iproxy:
+        func command() -> String? {
+            if self == .iproxy {
                 return "brew install libimobiledevice"
             }
-        }()
+            return nil
+        }
+    }
+    
+    struct ViewModel {
+        let suggestionType: SuggestionType
+        
+        init(suggestionType: SuggestionType) {
+            self.suggestionType = suggestionType
+        }
     }
 }

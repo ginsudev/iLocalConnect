@@ -13,7 +13,7 @@ extension MenuBarView {
         
         @Published var isEnabled: Bool = Settings.isEnabled
         @Published var isVisibleSettings: Bool = false
-        @Published var isInstallediProxy: Bool = false
+        @Published var isInstallediProxy: Bool = true
         
         init() {
             self.actionManager = MenuBarActionManager(menuBarViewModel: self)

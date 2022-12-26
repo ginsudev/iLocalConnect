@@ -20,10 +20,12 @@ struct SuggestionView: View {
     var body: some View {
         Button {
             if viewModel.suggestionType == .homebrew {
-                let url = URL(string: viewModel.command)!
+                let url = URL(string: "https://brew.sh")!
                 NSWorkspace.shared.open(url)
             } else {
-                ScriptHelper().openTerminal(withCommand: viewModel.command)
+                if let command = viewModel.suggestionType.command() {
+                    ScriptHelper().openTerminal(withCommand: command)
+                }
             }
         } label: {
             description
@@ -38,15 +40,14 @@ struct SuggestionView: View {
 
 private extension SuggestionView {
     var description: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Image(systemName: "exclamationmark.triangle.fill")
-                Text(viewModel.title)
+                Text(viewModel.suggestionType.title())
                     .font(.headline)
-                Spacer()
             }
 
-            Text(viewModel.subtitle)
+            Text(viewModel.suggestionType.subtitle())
                 .font(.body)
         }
         .multilineTextAlignment(.leading)
