@@ -27,10 +27,10 @@ private extension MenuBarSettingsView {
     var usernameInput: some View {
         VStack(alignment: .leading) {
             Text("Username:")
-                .font(.title)
+                .font(.headline)
             TextField("root", text: $viewModel.usernameText)
                 .textFieldStyle(.roundedBorder)
-                .onChange(of: viewModel.usernameText) { newValue in
+                .onChange(of: viewModel.usernameText) { _ in
                     viewModel.sync(type: .username)
                 }
         }
@@ -39,10 +39,10 @@ private extension MenuBarSettingsView {
     var portInput: some View {
         VStack(alignment: .leading) {
             Text("Port:")
-                .font(.title)
+                .font(.headline)
             TextField("2222", text: $viewModel.portText)
                 .textFieldStyle(.roundedBorder)
-                .onChange(of: viewModel.portText) { newValue in
+                .onChange(of: viewModel.portText) { _ in
                     viewModel.sync(type: .port)
                 }
         }

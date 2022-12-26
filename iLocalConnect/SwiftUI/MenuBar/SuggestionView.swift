@@ -19,20 +19,16 @@ struct SuggestionView: View {
     
     var body: some View {
         Button {
-            if viewModel.suggestionType == .homebrew {
-                let url = URL(string: "https://brew.sh")!
-                NSWorkspace.shared.open(url)
-            } else {
-                if let command = viewModel.suggestionType.command() {
-                    ScriptHelper().openTerminal(withCommand: command)
-                }
-            }
+            buttonAction()
         } label: {
-            description
-                .background(RoundedRectangle(cornerRadius: 12).foregroundColor(.orange))
+            ZStack {
+                RoundedRectangle(cornerRadius: 12)
+                    .foregroundColor(.orange)
+                description
+            }
         }
-        .buttonStyle(.borderless)
         .frame(maxWidth: .infinity, maxHeight: 200)
+        .buttonStyle(.borderless)
     }
 }
 
@@ -46,12 +42,23 @@ private extension SuggestionView {
                 Text(viewModel.suggestionType.title())
                     .font(.headline)
             }
-
             Text(viewModel.suggestionType.subtitle())
                 .font(.body)
         }
+        .foregroundColor(.white)
         .multilineTextAlignment(.leading)
         .padding()
+    }
+    
+    func buttonAction() {
+        if viewModel.suggestionType == .homebrew {
+            let url = URL(string: "https://brew.sh")!
+            NSWorkspace.shared.open(url)
+        } else {
+            if let command = viewModel.suggestionType.command() {
+                ScriptHelper().openTerminal(withCommand: command)
+            }
+        }
     }
 }
 

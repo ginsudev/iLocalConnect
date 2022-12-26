@@ -9,13 +9,15 @@ import SwiftUI
 
 @main
 struct iLocalConnectApp: App {
+    @StateObject private var viewModel = ViewModel.shared
+    
     var body: some Scene {
         MenuBarExtra {
             MenuBarView()
         } label: {
             HStack {
-                Image(systemName: "terminal")
-                Text("iLocalConnect")
+                Image(systemName: viewModel.isEnabled ? "iphone" : "iphone.slash")
+                Text(viewModel.isEnabled ? "Enabled" : "Disabled")
             }
         }
         .menuBarExtraStyle(.window)

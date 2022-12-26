@@ -15,6 +15,7 @@ struct Settings {
         
         set  {
             UserDefaults.standard.set(newValue, forKey: "iLocalConnect.isEnabled")
+            iLocalConnectApp.ViewModel.shared.isEnabled = newValue
         }
     }
     

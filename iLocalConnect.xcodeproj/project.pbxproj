@@ -22,6 +22,7 @@
 		4F03699129596134004FCC1D /* ScriptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03699029596134004FCC1D /* ScriptHelper.swift */; };
 		4F0369942959686E004FCC1D /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0369932959686E004FCC1D /* SuggestionView.swift */; };
 		4F03699629596ED1004FCC1D /* SuggestionView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03699529596ED1004FCC1D /* SuggestionView.ViewModel.swift */; };
+		4F0369992959966A004FCC1D /* iLocalConnectApp.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0369982959966A004FCC1D /* iLocalConnectApp.ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		4F03699029596134004FCC1D /* ScriptHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptHelper.swift; sourceTree = "<group>"; };
 		4F0369932959686E004FCC1D /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
 		4F03699529596ED1004FCC1D /* SuggestionView.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.ViewModel.swift; sourceTree = "<group>"; };
+		4F0369982959966A004FCC1D /* iLocalConnectApp.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLocalConnectApp.ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				4F03699229596343004FCC1D /* Core */,
 				4F03697E295840C6004FCC1D /* SwiftUI */,
 				4F03695329583F32004FCC1D /* iLocalConnectApp.swift */,
+				4F0369982959966A004FCC1D /* iLocalConnectApp.ViewModel.swift */,
 				4F03695729583F33004FCC1D /* Assets.xcassets */,
 				4F03695C29583F33004FCC1D /* iLocalConnect.entitlements */,
 				4F03695929583F33004FCC1D /* Preview Content */,
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0369992959966A004FCC1D /* iLocalConnectApp.ViewModel.swift in Sources */,
 				4F036981295840EF004FCC1D /* MenuBarView.swift in Sources */,
 				4F0369942959686E004FCC1D /* SuggestionView.swift in Sources */,
 				4F0369852958460D004FCC1D /* MenuBarActionManager.swift in Sources */,

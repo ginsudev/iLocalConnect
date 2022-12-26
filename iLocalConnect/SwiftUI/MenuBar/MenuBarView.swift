@@ -13,11 +13,12 @@ struct MenuBarView: View {
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
-        List {
-            buttonsGroup
-            settings
-            suggestions
-                .frame(maxHeight: .infinity)
+        VStack(alignment: .center) {
+            List {
+                buttonsGroup
+                settings
+                suggestions
+            }
         }
         .frame(maxWidth: .infinity)
         .onAppear {
@@ -104,17 +105,13 @@ private extension MenuBarView {
         }
     }
     
-    @ViewBuilder
     var suggestions: some View {
         VStack {
             if !Settings.isInstalledHomebrew {
                 SuggestionView(suggestionType: .homebrew)
-                    .frame(maxHeight: 200)
             }
-            
             if !viewModel.isInstallediProxy {
                 SuggestionView(suggestionType: .iproxy)
-                    .frame(maxHeight: 200)
             }
         }
     }
