@@ -24,7 +24,7 @@ final class iLCPrefs: ObservableObject {
     
     @Published var port: String = UserDefaults.standard.string(forKey: "iLocalConnect.port") ?? "2222" {
         didSet {
-            UserDefaults.standard.set(username, forKey: "iLocalConnect.port")
+            UserDefaults.standard.set(port, forKey: "iLocalConnect.port")
         }
     }
     
