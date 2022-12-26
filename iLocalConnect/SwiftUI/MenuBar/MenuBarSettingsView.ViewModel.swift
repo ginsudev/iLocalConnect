@@ -14,15 +14,15 @@ extension MenuBarSettingsView {
     }
     
     final class ViewModel: ObservableObject {
-        @Published var usernameText: String = Settings.username
-        @Published var portText: String = Settings.port
+        @Published var usernameText: String = iLCPrefs.shared.username
+        @Published var portText: String = iLCPrefs.shared.port
         
         func sync(type: PropertyType) {
             switch type {
             case .username:
-                Settings.username = usernameText
+                iLCPrefs.shared.username = usernameText
             case .port:
-                Settings.port = portText
+                iLCPrefs.shared.port = portText
             }
         }
     }

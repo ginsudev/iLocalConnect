@@ -11,6 +11,7 @@ import SwiftUI
 
 struct MenuBarView: View {
     @StateObject private var viewModel = ViewModel()
+    @EnvironmentObject var prefs: iLCPrefs
     
     var body: some View {
         VStack(alignment: .center) {
@@ -23,7 +24,7 @@ struct MenuBarView: View {
         .frame(maxWidth: .infinity)
         .onAppear {
             Task {
-                viewModel.isInstallediProxy = await Settings.isInstalledIProxy()
+                viewModel.isInstallediProxy = await prefs.isInstalledIProxy()
             }
         }
     }
@@ -34,17 +35,17 @@ struct MenuBarView: View {
 private extension MenuBarView {
     var enabledButton: some View {
         Button {
-            viewModel.actionManager?.toggleEnabled()
+            viewModel.actionManager.toggleEnabled()
         } label: {
             VStack {
-                Image(systemName: viewModel.isEnabled ? "checkmark" : "xmark")
+                Image(systemName: prefs.isEnabled ? "checkmark" : "xmark")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20)
                     .padding()
-                    .background(viewModel.isEnabled ? Color.green : Color.red)
+                    .background(prefs.isEnabled ? Color.green : Color.red)
                     .clipShape(Circle())
-                Text(viewModel.isEnabled ? "Enabled" : "Disabled")
+                Text(prefs.isEnabled ? "Enabled" : "Disabled")
             }
         }
         .buttonStyle(.borderless)
@@ -52,7 +53,7 @@ private extension MenuBarView {
     
     var connectButton: some View {
         Button {
-            viewModel.actionManager?.connectWithTerminal()
+            viewModel.actionManager.connectWithTerminal()
         } label: {
             VStack {
                 Image(systemName: "terminal")
@@ -60,21 +61,21 @@ private extension MenuBarView {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20)
                     .padding()
-                    .background(viewModel.isEnabled ? Color.blue : Color.gray)
+                    .background(prefs.isEnabled ? Color.blue : Color.gray)
                     .clipShape(Circle())
                 Text("Connect")
             }
         }
         .buttonStyle(.borderless)
-        .disabled(!viewModel.isEnabled)
+        .disabled(!prefs.isEnabled)
     }
     
     var settingsButton: some View {
         Button {
-            viewModel.actionManager?.toggleisVisibleSettings()
+            viewModel.actionManager.toggleisVisibleSettings()
         } label: {
             VStack {
-                Image(systemName: viewModel.isVisibleSettings ? "chevron.down" : "chevron.right")
+                Image(systemName: prefs.isVisibleSettings ? "chevron.down" : "chevron.right")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20)
@@ -97,7 +98,7 @@ private extension MenuBarView {
     
     @ViewBuilder
     var settings: some View {
-        if viewModel.isVisibleSettings {
+        if prefs.isVisibleSettings {
             Divider()
             MenuBarSettingsView()
         }
@@ -105,7 +106,7 @@ private extension MenuBarView {
     
     var suggestions: some View {
         VStack {
-            if !Settings.isInstalledHomebrew {
+            if !prefs.isInstalledHomebrew {
                 SuggestionView(suggestionType: .homebrew)
             }
             if !viewModel.isInstallediProxy {

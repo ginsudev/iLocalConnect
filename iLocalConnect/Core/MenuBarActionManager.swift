@@ -8,37 +8,27 @@
 import Foundation
 
 final class MenuBarActionManager {
-    weak var menuBarViewModel: MenuBarView.ViewModel?
     private let scriptHelper = ScriptHelper()
     
-    init(menuBarViewModel: MenuBarView.ViewModel) {
-        self.menuBarViewModel = menuBarViewModel
-    }
-    
     func toggleEnabled() {
-        if let menuBarViewModel {
-            menuBarViewModel.isEnabled.toggle()
-            Settings.isEnabled = menuBarViewModel.isEnabled
-        }
+        iLCPrefs.shared.isEnabled.toggle()
         
         Task(priority: .background) { [weak self] in
-            if Settings.isEnabled {
-                await self?.scriptHelper.shell("/opt/homebrew/bin/iproxy", ["\(Settings.port):22"])
-                print("ran iproxy")
+            if iLCPrefs.shared.isEnabled {
+                await self?.scriptHelper.shell("/opt/homebrew/bin/iproxy", ["\(iLCPrefs.shared.port):22"])
             } else {
                 await self?.scriptHelper.shell("/usr/bin/killall", ["iproxy"])
-                print("killed iproxy")
             }
         }
     }
     
     func toggleisVisibleSettings() {
-        if let menuBarViewModel {
-            menuBarViewModel.isVisibleSettings.toggle()
-        }
+        iLCPrefs.shared.isVisibleSettings.toggle()
     }
     
     func connectWithTerminal() {
-        scriptHelper.openTerminal(withCommand: "ssh \(Settings.username)@localhost -p \(Settings.port)")
+        scriptHelper.openTerminal(
+            withCommand: "ssh \(iLCPrefs.shared.username)@localhost -p \(iLCPrefs.shared.port)"
+        )
     }
 }

@@ -10,7 +10,29 @@ import Cocoa
 
 extension iLocalConnectApp {
     final class ViewModel: ObservableObject {
-        static let shared = ViewModel()
-        @Published var isEnabled: Bool = Settings.isEnabled
+        
+        private init() {
+            NSWorkspace.shared.notificationCenter.addObserver(
+                self,
+                selector: #selector(isSleepingDidChange(_:)),
+                name: NSWorkspace.willSleepNotification,
+                object: nil
+            )
+            
+            NSWorkspace.shared.notificationCenter.addObserver(
+                self,
+                selector: #selector(isSleepingDidChange(_:)),
+                name: NSWorkspace.didWakeNotification,
+                object: nil
+            )
+        }
+        
+        @objc private func isSleepingDidChange(_ notification: NSNotification) {
+            if notification.name == NSWorkspace.willSleepNotification {
+                
+            } else if notification.name == NSWorkspace.didWakeNotification {
+                
+            }
+        }
     }
 }

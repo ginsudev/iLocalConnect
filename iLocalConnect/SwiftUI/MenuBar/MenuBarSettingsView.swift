@@ -10,7 +10,7 @@ import SwiftUI
 // MARK: - Public
 
 struct MenuBarSettingsView: View {
-    @StateObject private var viewModel = ViewModel()
+    @EnvironmentObject var prefs: iLCPrefs
     
     var body: some View {
         VStack {
@@ -28,11 +28,8 @@ private extension MenuBarSettingsView {
         VStack(alignment: .leading) {
             Text("Username:")
                 .font(.headline)
-            TextField("root", text: $viewModel.usernameText)
+            TextField("root", text: $prefs.username)
                 .textFieldStyle(.roundedBorder)
-                .onChange(of: viewModel.usernameText) { _ in
-                    viewModel.sync(type: .username)
-                }
         }
     }
     
@@ -40,11 +37,8 @@ private extension MenuBarSettingsView {
         VStack(alignment: .leading) {
             Text("Port:")
                 .font(.headline)
-            TextField("2222", text: $viewModel.portText)
+            TextField("2222", text: $prefs.port)
                 .textFieldStyle(.roundedBorder)
-                .onChange(of: viewModel.portText) { _ in
-                    viewModel.sync(type: .port)
-                }
         }
     }
 }

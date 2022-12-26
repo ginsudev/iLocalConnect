@@ -17,8 +17,7 @@
 		4F036983295841C2004FCC1D /* MenuBarView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F036982295841C2004FCC1D /* MenuBarView.ViewModel.swift */; };
 		4F0369852958460D004FCC1D /* MenuBarActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0369842958460D004FCC1D /* MenuBarActionManager.swift */; };
 		4F03698B29594B60004FCC1D /* MenuBarSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03698A29594B5F004FCC1D /* MenuBarSettingsView.swift */; };
-		4F03698D29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03698C29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift */; };
-		4F03698F29594DBA004FCC1D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03698E29594DBA004FCC1D /* Settings.swift */; };
+		4F03698F29594DBA004FCC1D /* iLCPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03698E29594DBA004FCC1D /* iLCPrefs.swift */; };
 		4F03699129596134004FCC1D /* ScriptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03699029596134004FCC1D /* ScriptHelper.swift */; };
 		4F0369942959686E004FCC1D /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0369932959686E004FCC1D /* SuggestionView.swift */; };
 		4F03699629596ED1004FCC1D /* SuggestionView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03699529596ED1004FCC1D /* SuggestionView.ViewModel.swift */; };
@@ -57,8 +56,7 @@
 		4F036982295841C2004FCC1D /* MenuBarView.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.ViewModel.swift; sourceTree = "<group>"; };
 		4F0369842958460D004FCC1D /* MenuBarActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarActionManager.swift; sourceTree = "<group>"; };
 		4F03698A29594B5F004FCC1D /* MenuBarSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarSettingsView.swift; sourceTree = "<group>"; };
-		4F03698C29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarSettingsView.ViewModel.swift; sourceTree = "<group>"; };
-		4F03698E29594DBA004FCC1D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4F03698E29594DBA004FCC1D /* iLCPrefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLCPrefs.swift; sourceTree = "<group>"; };
 		4F03699029596134004FCC1D /* ScriptHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptHelper.swift; sourceTree = "<group>"; };
 		4F0369932959686E004FCC1D /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
 		4F03699529596ED1004FCC1D /* SuggestionView.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.ViewModel.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				4F036980295840EF004FCC1D /* MenuBarView.swift */,
 				4F036982295841C2004FCC1D /* MenuBarView.ViewModel.swift */,
 				4F03698A29594B5F004FCC1D /* MenuBarSettingsView.swift */,
-				4F03698C29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift */,
 				4F0369932959686E004FCC1D /* SuggestionView.swift */,
 				4F03699529596ED1004FCC1D /* SuggestionView.ViewModel.swift */,
 			);
@@ -173,7 +170,7 @@
 		4F03699229596343004FCC1D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				4F03698E29594DBA004FCC1D /* Settings.swift */,
+				4F03698E29594DBA004FCC1D /* iLCPrefs.swift */,
 				4F03699029596134004FCC1D /* ScriptHelper.swift */,
 				4F0369842958460D004FCC1D /* MenuBarActionManager.swift */,
 			);
@@ -317,8 +314,7 @@
 				4F03699129596134004FCC1D /* ScriptHelper.swift in Sources */,
 				4F03698B29594B60004FCC1D /* MenuBarSettingsView.swift in Sources */,
 				4F036983295841C2004FCC1D /* MenuBarView.ViewModel.swift in Sources */,
-				4F03698F29594DBA004FCC1D /* Settings.swift in Sources */,
-				4F03698D29594B95004FCC1D /* MenuBarSettingsView.ViewModel.swift in Sources */,
+				4F03698F29594DBA004FCC1D /* iLCPrefs.swift in Sources */,
 				4F03699629596ED1004FCC1D /* SuggestionView.ViewModel.swift in Sources */,
 				4F03695429583F32004FCC1D /* iLocalConnectApp.swift in Sources */,
 			);
