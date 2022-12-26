@@ -14,12 +14,12 @@ struct MenuBarView: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            List {
-                buttonsGroup
-                settings
-                suggestions
-            }
+            buttonsGroup
+            settings
+            suggestions
         }
+        .padding()
+        .backgroundStyle(.regularMaterial)
         .frame(maxWidth: .infinity)
         .onAppear {
             Task {
@@ -89,11 +89,9 @@ private extension MenuBarView {
     
     var buttonsGroup: some View {
         HStack(spacing: 20) {
-            Spacer()
             enabledButton
             connectButton
             settingsButton
-            Spacer()
         }
     }
     

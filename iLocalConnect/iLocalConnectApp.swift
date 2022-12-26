@@ -14,6 +14,7 @@ struct iLocalConnectApp: App {
     var body: some Scene {
         MenuBarExtra {
             MenuBarView()
+                .fixedSize(horizontal: false, vertical: false)
         } label: {
             HStack {
                 Image(systemName: viewModel.isEnabled ? "iphone" : "iphone.slash")
