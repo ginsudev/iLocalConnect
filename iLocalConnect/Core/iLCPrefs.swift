@@ -13,9 +13,10 @@ final class iLCPrefs: ObservableObject {
     @Published var isEnabled: Bool = UserDefaults.standard.bool(forKey: "iLocalConnect.isEnabled") {
         didSet {
             UserDefaults.standard.set(isEnabled, forKey: "iLocalConnect.isEnabled")
+            ActionManager.shared.toggle(enable: isEnabled)
         }
     }
-
+    
     @Published var username: String = UserDefaults.standard.string(forKey: "iLocalConnect.username") ?? "root" {
         didSet {
             UserDefaults.standard.set(username, forKey: "iLocalConnect.username")
@@ -28,7 +29,15 @@ final class iLCPrefs: ObservableObject {
         }
     }
     
+    @Published var canDisableWhenAsleep: Bool = UserDefaults.standard.bool(forKey: "iLocalConnect.disableWhenAsleep") {
+        didSet {
+            UserDefaults.standard.set(canDisableWhenAsleep, forKey: "iLocalConnect.disableWhenAsleep")
+        }
+    }
+    
     @Published var isVisibleSettings: Bool = false
+    
+    @Published var isTemporarilyDisabledDueToSleep: Bool = false
     
     var isInstalledHomebrew: Bool {
         return FileManager.default.fileExists(atPath: "/opt/homebrew/bin/brew")
@@ -37,5 +46,12 @@ final class iLCPrefs: ObservableObject {
     func isInstalledIProxy() async -> Bool {
         let (output, _) = await ScriptHelper().shell("/usr/bin/which", ["iproxy"])
         return output != nil
+    }
+    
+    func resetPreferences() {
+        isEnabled = false
+        username = "root"
+        port = "2222"
+        canDisableWhenAsleep = false
     }
 }

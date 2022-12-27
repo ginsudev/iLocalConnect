@@ -10,8 +10,8 @@ import SwiftUI
 // MARK: - Public
 
 struct MenuBarView: View {
-    @StateObject private var viewModel = ViewModel()
     @EnvironmentObject var prefs: iLCPrefs
+    @State private var isInstallediProxy: Bool = true
     
     var body: some View {
         VStack(alignment: .center) {
@@ -22,10 +22,8 @@ struct MenuBarView: View {
         .padding()
         .backgroundStyle(.regularMaterial)
         .frame(maxWidth: .infinity)
-        .onAppear {
-            Task {
-                viewModel.isInstallediProxy = await prefs.isInstalledIProxy()
-            }
+        .task {
+            isInstallediProxy = await prefs.isInstalledIProxy()
         }
     }
 }
@@ -35,7 +33,7 @@ struct MenuBarView: View {
 private extension MenuBarView {
     var enabledButton: some View {
         Button {
-            viewModel.actionManager.toggleEnabled()
+            prefs.isEnabled.toggle()
         } label: {
             VStack {
                 Image(systemName: prefs.isEnabled ? "checkmark" : "xmark")
@@ -53,7 +51,7 @@ private extension MenuBarView {
     
     var connectButton: some View {
         Button {
-            viewModel.actionManager.connectWithTerminal()
+            ActionManager.shared.connectWithTerminal()
         } label: {
             VStack {
                 Image(systemName: "terminal")
@@ -72,7 +70,7 @@ private extension MenuBarView {
     
     var settingsButton: some View {
         Button {
-            viewModel.actionManager.toggleisVisibleSettings()
+            ActionManager.shared.toggleisVisibleSettings()
         } label: {
             VStack {
                 Image(systemName: prefs.isVisibleSettings ? "chevron.down" : "chevron.right")
@@ -109,7 +107,7 @@ private extension MenuBarView {
             if !prefs.isInstalledHomebrew {
                 SuggestionView(suggestionType: .homebrew)
             }
-            if !viewModel.isInstallediProxy {
+            if !isInstallediProxy {
                 SuggestionView(suggestionType: .iproxy)
             }
         }

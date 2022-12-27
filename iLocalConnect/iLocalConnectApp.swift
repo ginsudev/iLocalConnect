@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import AVKit
+
+// MARK: - Public
 
 @main
 struct iLocalConnectApp: App {
@@ -17,11 +20,31 @@ struct iLocalConnectApp: App {
                 .environmentObject(prefs)
                 .fixedSize(horizontal: false, vertical: false)
         } label: {
-            HStack {
-                Image(systemName: prefs.isEnabled ? "iphone" : "iphone.slash")
-                Text(prefs.isEnabled ? "Enabled" : "Disabled")
-            }
+            menuBarFace
         }
         .menuBarExtraStyle(.window)
+    }
+}
+
+// MARK: - Private
+
+private extension iLocalConnectApp {
+    var menuBarFace: some View {
+        HStack {
+            Image(systemName: prefs.isEnabled ? "iphone" : "iphone.slash")
+            Text(prefs.isEnabled ? "Enabled" : "Disabled")
+        }
+        .onReceive(NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.willSleepNotification)) { _ in
+            if prefs.isEnabled, prefs.canDisableWhenAsleep {
+                prefs.isEnabled = false
+                prefs.isTemporarilyDisabledDueToSleep = true
+            }
+        }
+        .onReceive(NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.didWakeNotification)) { _ in
+            if prefs.canDisableWhenAsleep, prefs.isTemporarilyDisabledDueToSleep {
+                prefs.isEnabled = true
+                prefs.isTemporarilyDisabledDueToSleep = false
+            }
+        }
     }
 }

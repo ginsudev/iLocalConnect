@@ -51,16 +51,19 @@ private extension SuggestionView {
     }
     
     func buttonAction() {
-        if viewModel.suggestionType == .homebrew {
+        switch viewModel.suggestionType {
+        case .homebrew:
             let url = URL(string: "https://brew.sh")!
             NSWorkspace.shared.open(url)
-        } else {
+        default:
             if let command = viewModel.suggestionType.command() {
                 ScriptHelper().openTerminal(withCommand: command)
             }
         }
     }
 }
+
+// MARK: - Previews
 
 struct SuggestionView_Previews: PreviewProvider {
     static var previews: some View {

@@ -7,19 +7,26 @@
 
 import Foundation
 
-final class MenuBarActionManager {
+final class ActionManager {
+    static let shared = ActionManager()
     private let scriptHelper = ScriptHelper()
     
-    func toggleEnabled() {
-        iLCPrefs.shared.isEnabled.toggle()
-        
+    func toggle(enable: Bool) {
         Task(priority: .background) { [weak self] in
-            if iLCPrefs.shared.isEnabled {
-                await self?.scriptHelper.shell("/opt/homebrew/bin/iproxy", ["\(iLCPrefs.shared.port):22"])
+            if enable {
+                await self?.startiProxy()
             } else {
-                await self?.scriptHelper.shell("/usr/bin/killall", ["iproxy"])
+                await self?.killiProxy()
             }
         }
+    }
+    
+    func startiProxy() async {
+        await scriptHelper.shell("/opt/homebrew/bin/iproxy", ["\(iLCPrefs.shared.port):22"])
+    }
+    
+    func killiProxy() async {
+        await scriptHelper.shell("/usr/bin/killall", ["iproxy"])
     }
     
     func toggleisVisibleSettings() {

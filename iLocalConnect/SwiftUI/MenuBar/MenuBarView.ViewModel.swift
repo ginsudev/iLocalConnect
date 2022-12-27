@@ -9,7 +9,6 @@ import Foundation
 
 extension MenuBarView {
     final class ViewModel: ObservableObject {
-        let actionManager = MenuBarActionManager()
         @Published var isInstallediProxy: Bool = true
     }
 }

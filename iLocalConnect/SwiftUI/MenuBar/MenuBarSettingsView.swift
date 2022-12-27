@@ -17,6 +17,10 @@ struct MenuBarSettingsView: View {
             usernameInput
             Divider()
             portInput
+            Divider()
+            toggles
+            Divider()
+            resetButton
         }
     }
 }
@@ -40,6 +44,22 @@ private extension MenuBarSettingsView {
             TextField("2222", text: $prefs.port)
                 .textFieldStyle(.roundedBorder)
         }
+    }
+    
+    var toggles: some View {
+        VStack(alignment: .leading) {
+            Toggle("Disable when asleep", isOn: $prefs.canDisableWhenAsleep)
+                .toggleStyle(.switch)
+        }
+    }
+    
+    var resetButton: some View {
+        Button {
+            prefs.resetPreferences()
+        } label: {
+            Text("Reset preferences")
+        }
+
     }
 }
 
