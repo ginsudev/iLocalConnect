@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LaunchAtLogin
 
 // MARK: - Public
 
@@ -13,42 +14,32 @@ struct MenuBarSettingsView: View {
     @EnvironmentObject var prefs: iLCPrefs
     
     var body: some View {
-        VStack {
-            usernameInput
-            Divider()
-            portInput
-            Divider()
+        Form {
+            usernamePortInput
             toggles
-            Divider()
             resetButton
         }
+        .formStyle(.grouped)
     }
 }
 
 // MARK: - Private
 
 private extension MenuBarSettingsView {
-    var usernameInput: some View {
+    var usernamePortInput: some View {
         VStack(alignment: .leading) {
-            Text("Username:")
-                .font(.headline)
-            TextField("root", text: $prefs.username)
+            TextField("Username", text: $prefs.username)
                 .textFieldStyle(.roundedBorder)
-        }
-    }
-    
-    var portInput: some View {
-        VStack(alignment: .leading) {
-            Text("Port:")
-                .font(.headline)
-            TextField("2222", text: $prefs.port)
+            TextField("Port", text: $prefs.port)
                 .textFieldStyle(.roundedBorder)
         }
     }
     
     var toggles: some View {
-        VStack(alignment: .leading) {
+        VStack {
             Toggle("Disable when asleep", isOn: $prefs.canDisableWhenAsleep)
+                .toggleStyle(.switch)
+            LaunchAtLogin.Toggle()
                 .toggleStyle(.switch)
         }
     }
@@ -58,8 +49,8 @@ private extension MenuBarSettingsView {
             prefs.resetPreferences()
         } label: {
             Text("Reset preferences")
+                .frame(maxWidth: .infinity)
         }
-
     }
 }
 

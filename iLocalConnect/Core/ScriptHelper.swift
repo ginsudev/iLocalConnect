@@ -19,7 +19,7 @@ struct ScriptHelper {
     }
     
     func openTerminal(withCommand command: String) {
-        DispatchQueue.global(qos: .default).async {
+        Task(priority: .background) {
             var error: NSDictionary?
             let script = script(fromCommand: command)
             
@@ -35,26 +35,20 @@ struct ScriptHelper {
     }
     
     @discardableResult
-    func shell(_ launchPath: String, _ arguments: [String] = []) async -> (String?, Int32) {
-      let task = Process()
-      task.executableURL = URL(fileURLWithPath: launchPath)
-      task.arguments = arguments
-
-      let pipe = Pipe()
-      task.standardOutput = pipe
-      task.standardError = pipe
-
-      do {
+    func shell(_ launchPath: String, _ arguments: [String] = []) async throws -> (String?, Int32) {
+        let pipe = Pipe()
+        let task = Process()
+        task.executableURL = URL(fileURLWithPath: launchPath)
+        task.arguments = arguments
+        task.standardOutput = pipe
+        task.standardError = pipe
+        
         try task.run()
-      } catch {
-        // handle errors
-        print("Error: \(error.localizedDescription)")
-      }
-
-      let data = pipe.fileHandleForReading.readDataToEndOfFile()
-      let output = String(data: data, encoding: .utf8)
-
-      task.waitUntilExit()
-      return (output, task.terminationStatus)
+        
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let output = String(data: data, encoding: .utf8)
+        
+        task.waitUntilExit()
+        return (output, task.terminationStatus)
     }
 }

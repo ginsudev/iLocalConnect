@@ -18,7 +18,10 @@ struct iLocalConnectApp: App {
         MenuBarExtra {
             MenuBarView()
                 .environmentObject(prefs)
-                .fixedSize(horizontal: false, vertical: false)
+                .fixedSize(
+                    horizontal: false,
+                    vertical: false
+                )
         } label: {
             menuBarFace
         }

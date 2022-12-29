@@ -44,8 +44,12 @@ final class iLCPrefs: ObservableObject {
     }
     
     func isInstalledIProxy() async -> Bool {
-        let (output, _) = await ScriptHelper().shell("/usr/bin/which", ["iproxy"])
-        return output != nil
+        do {
+            let (output, _) = try await ScriptHelper().shell("/usr/bin/which", ["iproxy"])
+            return output != nil
+        } catch {
+            return false
+        }
     }
     
     func resetPreferences() {

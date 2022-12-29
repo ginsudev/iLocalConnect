@@ -22,11 +22,19 @@ final class ActionManager {
     }
     
     func startiProxy() async {
-        await scriptHelper.shell("/opt/homebrew/bin/iproxy", ["\(iLCPrefs.shared.port):22"])
+        do {
+            try await scriptHelper.shell("/opt/homebrew/bin/iproxy", ["\(iLCPrefs.shared.port):22"])
+        } catch {
+            // TODO: handle errors
+        }
     }
     
     func killiProxy() async {
-        await scriptHelper.shell("/usr/bin/killall", ["iproxy"])
+        do {
+            try await scriptHelper.shell("/usr/bin/killall", ["iproxy"])
+        } catch {
+            // TODO: handle errors
+        }
     }
     
     func toggleisVisibleSettings() {
