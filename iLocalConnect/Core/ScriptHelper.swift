@@ -49,6 +49,7 @@ struct ScriptHelper {
         let output = String(data: data, encoding: .utf8)
         
         task.waitUntilExit()
+        
         return (output, task.terminationStatus)
     }
 }

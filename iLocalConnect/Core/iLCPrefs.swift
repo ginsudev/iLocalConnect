@@ -43,13 +43,8 @@ final class iLCPrefs: ObservableObject {
         return FileManager.default.fileExists(atPath: "/opt/homebrew/bin/brew")
     }
     
-    func isInstalledIProxy() async -> Bool {
-        do {
-            let (output, _) = try await ScriptHelper().shell("/usr/bin/which", ["iproxy"])
-            return output != nil
-        } catch {
-            return false
-        }
+    var isInstalledIProxy: Bool {
+        return FileManager.default.fileExists(atPath: "/opt/homebrew/bin/iproxy")
     }
     
     func resetPreferences() {

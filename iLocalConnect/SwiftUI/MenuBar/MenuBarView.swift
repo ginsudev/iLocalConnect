@@ -11,7 +11,6 @@ import SwiftUI
 
 struct MenuBarView: View {
     @EnvironmentObject var prefs: iLCPrefs
-    @State private var isInstallediProxy: Bool = true
     
     var body: some View {
         VStack(alignment: .center) {
@@ -22,9 +21,6 @@ struct MenuBarView: View {
         .padding()
         .backgroundStyle(.regularMaterial)
         .frame(maxWidth: .infinity)
-        .task {
-            isInstallediProxy = await prefs.isInstalledIProxy()
-        }
     }
 }
 
@@ -107,7 +103,7 @@ private extension MenuBarView {
             if !prefs.isInstalledHomebrew {
                 SuggestionView(suggestionType: .homebrew)
             }
-            if !isInstallediProxy {
+            if !prefs.isInstalledIProxy {
                 SuggestionView(suggestionType: .iproxy)
             }
         }
