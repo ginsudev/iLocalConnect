@@ -47,6 +47,9 @@ final class iLCPrefs: ObservableObject {
         return FileManager.default.fileExists(atPath: "/opt/homebrew/bin/iproxy")
     }
     
+    let appVersion = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown version")"
+
+    
     func resetPreferences() {
         isEnabled = false
         username = "root"

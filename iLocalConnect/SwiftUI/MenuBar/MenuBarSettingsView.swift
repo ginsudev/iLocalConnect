@@ -12,12 +12,14 @@ import LaunchAtLogin
 
 struct MenuBarSettingsView: View {
     @EnvironmentObject var prefs: iLCPrefs
+    @Environment(\.openURL) private var openURL
     
     var body: some View {
         Form {
             usernamePortInput
             toggles
-            resetButton
+            buttons
+            versionText
         }
         .formStyle(.grouped)
     }
@@ -44,13 +46,42 @@ private extension MenuBarSettingsView {
         }
     }
     
-    var resetButton: some View {
-        Button {
-            prefs.resetPreferences()
-        } label: {
-            Text("Reset preferences")
-                .frame(maxWidth: .infinity)
+    var buttons: some View {
+        VStack {
+            Button {
+                if let url = URL(string: "https://twitter.com/ginsudev") {
+                    openURL(url)
+                }
+            } label: {
+                Text("Follow @ginsudev on Twitter")
+                    .frame(maxWidth: .infinity)
+            }
+            Button {
+                if let url = URL(string: "https://github.com/ginsudev/iLocalConnect/releases") {
+                    openURL(url)
+                }
+            } label: {
+                Text("Check for updates")
+                    .frame(maxWidth: .infinity)
+            }
+            Button {
+                prefs.resetPreferences()
+            } label: {
+                Text("Reset preferences")
+                    .frame(maxWidth: .infinity)
+            }
+            Button {
+                NSApplication.shared.terminate(self)
+            } label: {
+                Text("Quit")
+                    .frame(maxWidth: .infinity)
+            }
         }
+    }
+    
+    var versionText: some View {
+        Text(prefs.appVersion)
+            .font(.body)
     }
 }
 
