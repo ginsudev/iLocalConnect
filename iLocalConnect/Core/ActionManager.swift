@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ServiceManagement
 
 final class ActionManager {
     static let shared = ActionManager()
@@ -45,5 +46,13 @@ final class ActionManager {
         scriptHelper.openTerminal(
             withCommand: "ssh \(iLCPrefs.shared.username)@localhost -p \(iLCPrefs.shared.port)"
         )
+    }
+    
+    func registerLoginItem(enabled: Bool) {
+        if enabled {
+            try? SMAppService().register()
+        } else{
+            try? SMAppService().unregister()
+        }
     }
 }

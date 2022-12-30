@@ -35,6 +35,13 @@ final class iLCPrefs: ObservableObject {
         }
     }
     
+    @Published var canLaunchAtLogin: Bool = UserDefaults.standard.bool(forKey: "iLocalConnect.canLaunchAtLogin") {
+        didSet {
+            UserDefaults.standard.set(canLaunchAtLogin, forKey: "iLocalConnect.canLaunchAtLogin")
+            ActionManager.shared.registerLoginItem(enabled: canLaunchAtLogin)
+        }
+    }
+    
     @Published var isVisibleSettings: Bool = false
     
     @Published var isTemporarilyDisabledDueToSleep: Bool = false

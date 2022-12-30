@@ -20,7 +20,6 @@
 		4F03699129596134004FCC1D /* ScriptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03699029596134004FCC1D /* ScriptHelper.swift */; };
 		4F0369942959686E004FCC1D /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0369932959686E004FCC1D /* SuggestionView.swift */; };
 		4F03699629596ED1004FCC1D /* SuggestionView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03699529596ED1004FCC1D /* SuggestionView.ViewModel.swift */; };
-		4F03699C295D7611004FCC1D /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 4F03699B295D7611004FCC1D /* LaunchAtLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F03699C295D7611004FCC1D /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +188,6 @@
 			);
 			name = iLocalConnect;
 			packageProductDependencies = (
-				4F03699B295D7611004FCC1D /* LaunchAtLogin */,
 			);
 			productName = iLocalConnect;
 			productReference = 4F03695029583F32004FCC1D /* iLocalConnect.app */;
@@ -265,7 +262,6 @@
 			);
 			mainGroup = 4F03694729583F32004FCC1D;
 			packageReferences = (
-				4F03699A295D7611004FCC1D /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
 			);
 			productRefGroup = 4F03695129583F32004FCC1D /* Products */;
 			projectDirPath = "";
@@ -408,7 +404,7 @@
 				MARKETING_VERSION = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -466,6 +462,7 @@
 				MARKETING_VERSION = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -648,25 +645,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		4F03699A295D7611004FCC1D /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4F03699B295D7611004FCC1D /* LaunchAtLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4F03699A295D7611004FCC1D /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
-			productName = LaunchAtLogin;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F03694829583F32004FCC1D /* Project object */;
 }

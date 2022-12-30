@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import LaunchAtLogin
 
 // MARK: - Public
 
@@ -41,7 +40,7 @@ private extension MenuBarSettingsView {
         VStack {
             Toggle("Disable when asleep", isOn: $prefs.canDisableWhenAsleep)
                 .toggleStyle(.switch)
-            LaunchAtLogin.Toggle()
+            Toggle("Launch at login", isOn: $prefs.canLaunchAtLogin)
                 .toggleStyle(.switch)
         }
     }
