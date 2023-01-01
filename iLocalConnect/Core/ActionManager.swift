@@ -23,10 +23,12 @@ final class ActionManager {
     }
     
     func startiProxy() async {
-        do {
-            try await scriptHelper.shell("/opt/homebrew/bin/iproxy", ["\(iLCPrefs.shared.port):22"])
-        } catch {
-            // TODO: handle errors
+        if let iproxyPath = iLCPrefs.shared.pathForFile(withName: "iproxy") {
+            do {
+                try await scriptHelper.shell(iproxyPath, ["\(iLCPrefs.shared.port):22"])
+            } catch {
+                print(error)
+            }
         }
     }
     
@@ -34,7 +36,7 @@ final class ActionManager {
         do {
             try await scriptHelper.shell("/usr/bin/killall", ["iproxy"])
         } catch {
-            // TODO: handle errors
+            print(error)
         }
     }
     

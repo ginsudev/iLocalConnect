@@ -46,16 +46,25 @@ final class iLCPrefs: ObservableObject {
     
     @Published var isTemporarilyDisabledDueToSleep: Bool = false
     
-    var isInstalledHomebrew: Bool {
-        return FileManager.default.fileExists(atPath: "/opt/homebrew/bin/brew")
-    }
-    
-    var isInstalledIProxy: Bool {
-        return FileManager.default.fileExists(atPath: "/opt/homebrew/bin/iproxy")
+    func pathForFile(withName name: String) -> String? {
+        // Homebrew installs to different directories on apple silicon and intel macs...
+        let paths = [
+            "/usr/bin/\(name)",
+            "/usr/local/bin/\(name)",
+            "/opt/homebrew/bin/\(name)",
+            "/usr/local/opt/\(name)"
+        ]
+        
+        for path in paths {
+            if FileManager.default.fileExists(atPath: path) {
+                return path
+            }
+        }
+        
+        return nil
     }
     
     let appVersion = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown version")"
-
     
     func resetPreferences() {
         isEnabled = false

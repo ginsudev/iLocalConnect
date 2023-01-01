@@ -100,10 +100,10 @@ private extension MenuBarView {
     
     var suggestions: some View {
         VStack {
-            if !prefs.isInstalledHomebrew {
+            if prefs.pathForFile(withName: "brew") == nil {
                 SuggestionView(suggestionType: .homebrew)
             }
-            if !prefs.isInstalledIProxy {
+            if prefs.pathForFile(withName: "iproxy") == nil {
                 SuggestionView(suggestionType: .iproxy)
             }
         }
